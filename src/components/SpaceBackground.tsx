@@ -52,7 +52,7 @@ const SpaceBackground = ({ scrollProgress }: SpaceBackgroundProps) => {
       />
       {Array.from({ length: 100 }).map((_, i) => {
         const size = Math.random() * 3 + 1;
-        const topPos = Math.random() * 100;
+        const topPos = Math.random() * 70;
         const leftPos = Math.random() * 100;
         const animDuration = Math.random() * 3 + 2;
         return (
