@@ -244,7 +244,7 @@ const ContentSections = ({ visibleSections, scrollProgress, scrollToSection }: C
       <footer className="py-12 px-6 border-t relative z-10">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-muted-foreground">
-            © 2026 И.П. Лисин Егор
+            И.П Прокошин Никита 2026
           </p>
         </div>
       </footer>
