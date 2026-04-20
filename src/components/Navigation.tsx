@@ -43,7 +43,7 @@ const Navigation = ({ activeSection, scrollProgress, scrollToSection }: Navigati
                 activeSection === 'videos' ? 'text-primary' : 'text-muted-foreground'
               }`}
             >
-              Видео
+              Видеоопыты
             </button>
           </div>
         </div>
