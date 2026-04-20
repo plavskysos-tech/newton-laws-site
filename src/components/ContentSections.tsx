@@ -78,13 +78,15 @@ const ContentSections = ({ visibleSections, scrollProgress, scrollToSection }: C
   const videos = [
     {
       title: 'Законы Ньютона простыми словами',
-      url: 'https://www.youtube.com/embed/kKKM8Y-u7ds',
-      description: 'Понятное объяснение всех трёх законов Ньютона с наглядными примерами'
+      url: 'https://cdn.poehali.dev/projects/ed403ce0-4a68-4081-894e-268aa095093d/bucket/3968060d-d0d8-428a-b7fc-283bf3a6d877.mp4',
+      description: 'Понятное объяснение всех трёх законов Ньютона с наглядными примерами',
+      isFile: true
     },
     {
       title: 'Эксперименты с законами Ньютона',
       url: 'https://www.youtube.com/embed/1ksm2u0AAII',
-      description: 'Интересные физические эксперименты, демонстрирующие законы механики'
+      description: 'Интересные физические эксперименты, демонстрирующие законы механики',
+      isFile: false
     }
   ];
 
@@ -219,16 +221,25 @@ const ContentSections = ({ visibleSections, scrollProgress, scrollToSection }: C
               >
                 <CardContent className="p-0">
                   <div className="aspect-video">
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src={video.url}
-                      title={video.title}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full"
-                    />
+                    {video.isFile ? (
+                      <video
+                        src={video.url}
+                        title={video.title}
+                        controls
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={video.url}
+                        title={video.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full"
+                      />
+                    )}
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">{video.title}</h3>
