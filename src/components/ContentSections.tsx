@@ -84,7 +84,7 @@ const ContentSections = ({ visibleSections, scrollProgress, scrollToSection }: C
     },
     {
       title: 'Видеоопыт по второму закону Ньютона',
-      url: 'https://cdn.poehali.dev/projects/ed403ce0-4a68-4081-894e-268aa095093d/bucket/a09684da-713f-498a-88f2-f6d93823e21c.mp4',
+      url: 'https://cdn.poehali.dev/projects/ed403ce0-4a68-4081-894e-268aa095093d/bucket/587a377e-e9f4-4318-9595-2143ee634dfc.mp4',
       description: 'Наглядный пример работы второго закона',
       isFile: true
     }
