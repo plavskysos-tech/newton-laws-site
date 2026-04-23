@@ -5,6 +5,8 @@ interface CarForcesProps {
 }
 
 const CarForces = ({ direction, scale, baseWidth }: CarForcesProps) => {
+  const labelMirror = direction === 'left' ? 'scaleX(-1)' : undefined;
+
   return (
     <>
       <div
@@ -15,8 +17,6 @@ const CarForces = ({ direction, scale, baseWidth }: CarForcesProps) => {
           height: '3px',
           width: `${70 * scale}px`,
           background: 'linear-gradient(to right, rgba(52,211,77,0) 0%, #34d34d 40%, #34d34d 100%)',
-          transform: direction === 'left' ? 'scaleX(-1)' : undefined,
-          transformOrigin: 'left center',
           boxShadow: '0 0 4px rgba(52,211,77,0.8)'
         }}
       >
@@ -44,7 +44,7 @@ const CarForces = ({ direction, scale, baseWidth }: CarForcesProps) => {
             fontWeight: 700,
             fontFamily: 'Montserrat, sans-serif',
             textShadow: '0 0 6px rgba(0,0,0,0.9), 0 0 3px rgba(0,0,0,0.9)',
-            transform: direction === 'left' ? 'scaleX(-1)' : undefined,
+            transform: labelMirror,
             whiteSpace: 'nowrap'
           }}
         >
@@ -60,8 +60,6 @@ const CarForces = ({ direction, scale, baseWidth }: CarForcesProps) => {
           height: '3px',
           width: `${50 * scale}px`,
           background: 'linear-gradient(to left, rgba(255,107,107,0) 0%, #ff6b6b 40%, #ff6b6b 100%)',
-          transform: direction === 'left' ? 'scaleX(-1)' : undefined,
-          transformOrigin: 'right center',
           boxShadow: '0 0 4px rgba(255,107,107,0.8)'
         }}
       >
@@ -89,7 +87,7 @@ const CarForces = ({ direction, scale, baseWidth }: CarForcesProps) => {
             fontWeight: 700,
             fontFamily: 'Montserrat, sans-serif',
             textShadow: '0 0 6px rgba(0,0,0,0.9), 0 0 3px rgba(0,0,0,0.9)',
-            transform: direction === 'left' ? 'scaleX(-1)' : undefined,
+            transform: labelMirror,
             whiteSpace: 'nowrap'
           }}
         >
@@ -106,7 +104,7 @@ const CarForces = ({ direction, scale, baseWidth }: CarForcesProps) => {
           height: `${55 * scale}px`,
           background: 'linear-gradient(to top, rgba(96,165,250,0) 0%, #60a5fa 40%, #60a5fa 100%)',
           boxShadow: '0 0 4px rgba(96,165,250,0.8)',
-          transform: direction === 'left' ? 'translateX(-50%) scaleX(-1)' : 'translateX(-50%)'
+          transform: 'translateX(-50%)'
         }}
       >
         <div
@@ -133,7 +131,7 @@ const CarForces = ({ direction, scale, baseWidth }: CarForcesProps) => {
             fontWeight: 700,
             fontFamily: 'Montserrat, sans-serif',
             textShadow: '0 0 6px rgba(0,0,0,0.9), 0 0 3px rgba(0,0,0,0.9)',
-            transform: direction === 'left' ? 'scaleX(-1)' : undefined,
+            transform: labelMirror,
             whiteSpace: 'nowrap'
           }}
         >
@@ -150,7 +148,7 @@ const CarForces = ({ direction, scale, baseWidth }: CarForcesProps) => {
           height: `${55 * scale}px`,
           background: 'linear-gradient(to bottom, rgba(251,191,36,0) 0%, #fbbf24 40%, #fbbf24 100%)',
           boxShadow: '0 0 4px rgba(251,191,36,0.8)',
-          transform: direction === 'left' ? 'translateX(-50%) scaleX(-1)' : 'translateX(-50%)'
+          transform: 'translateX(-50%)'
         }}
       >
         <div
@@ -177,7 +175,7 @@ const CarForces = ({ direction, scale, baseWidth }: CarForcesProps) => {
             fontWeight: 700,
             fontFamily: 'Montserrat, sans-serif',
             textShadow: '0 0 6px rgba(0,0,0,0.9), 0 0 3px rgba(0,0,0,0.9)',
-            transform: direction === 'left' ? 'scaleX(-1)' : undefined,
+            transform: labelMirror,
             whiteSpace: 'nowrap'
           }}
         >
