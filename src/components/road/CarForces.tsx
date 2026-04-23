@@ -142,10 +142,10 @@ const CarForces = ({ direction, scale, baseWidth }: CarForcesProps) => {
       <div
         style={{
           position: 'absolute',
-          top: `${36 * scale}px`,
+          top: `${18 * scale}px`,
           left: '50%',
           width: '3px',
-          height: `${55 * scale}px`,
+          height: `${40 * scale}px`,
           background: 'linear-gradient(to bottom, rgba(251,191,36,0) 0%, #fbbf24 40%, #fbbf24 100%)',
           boxShadow: '0 0 4px rgba(251,191,36,0.8)',
           transform: 'translateX(-50%)'
@@ -168,7 +168,7 @@ const CarForces = ({ direction, scale, baseWidth }: CarForcesProps) => {
         <div
           style={{
             position: 'absolute',
-            bottom: '-22px',
+            top: `${12 * scale}px`,
             left: '10px',
             color: '#fbbf24',
             fontSize: `${12 * scale}px`,
