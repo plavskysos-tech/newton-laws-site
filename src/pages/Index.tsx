@@ -3,6 +3,7 @@ import SpaceBackground from '@/components/SpaceBackground';
 import Navigation from '@/components/Navigation';
 import ContentSections from '@/components/ContentSections';
 import FallingApple from '@/components/FallingApple';
+import Ground from '@/components/Ground';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -50,6 +51,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white relative">
       <SpaceBackground scrollProgress={scrollProgress} />
+      <Ground scrollProgress={scrollProgress} />
       <FallingApple scrollProgress={scrollProgress} />
       <Navigation 
         activeSection={activeSection} 
