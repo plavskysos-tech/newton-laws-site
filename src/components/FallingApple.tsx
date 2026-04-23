@@ -20,7 +20,7 @@ const FallingApple = ({ scrollProgress }: FallingAppleProps) => {
           ? 'top 0.4s ease-out, transform 0.4s ease-out'
           : 'top 0.1s linear, transform 0.1s linear',
         opacity: scrollProgress > 0.02 ? 1 : 0,
-        zIndex: 0
+        zIndex: 2
       }}
     >
       <div className="relative" style={{ width: '50px', height: '55px' }}>

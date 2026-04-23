@@ -23,7 +23,10 @@ const Ground = ({ scrollProgress }: GroundProps) => {
     { left: '42%', size: 220, delay: 0.15, type: 'apple' },
     { left: '54%', size: 230, delay: 0.2, type: 'pine' },
     { left: '66%', size: 180, delay: 0.22, type: 'oak' },
-    { left: '76%', size: 110, delay: 0.27, type: 'bush' }
+    { left: '76%', size: 110, delay: 0.27, type: 'bush' },
+    { left: '82%', size: 220, delay: 0.3, type: 'pine' },
+    { left: '90%', size: 190, delay: 0.32, type: 'birch' },
+    { left: '96%', size: 140, delay: 0.35, type: 'bush' }
   ];
 
   const renderTree = (tree: TreeData) => {
