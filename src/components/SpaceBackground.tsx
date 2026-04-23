@@ -45,7 +45,7 @@ const SpaceBackground = ({ scrollProgress }: SpaceBackgroundProps) => {
         const startX = 20 + Math.random() * 60;
         const startY = 10 + Math.random() * 30;
         const duration = 3.5 + Math.random() * 2;
-        const delay = i === 0 ? 0 : i * 2.5 + Math.random() * 2;
+        const delay = 0;
         return (
           <div
             key={`meteor-${i}`}
