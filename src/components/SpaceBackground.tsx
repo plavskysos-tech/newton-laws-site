@@ -13,41 +13,10 @@ const SpaceBackground = ({ scrollProgress }: SpaceBackgroundProps) => {
             rgba(15, 20, 45, ${Math.max(0, 0.9 - scrollProgress * 1.3)}) 20%,
             rgba(20, 30, 60, ${Math.max(0, 0.8 - scrollProgress * 1.2)}) 35%,
             rgba(25, 50, 100, ${Math.max(0, 0.7 - scrollProgress * 1.0)}) 45%,
-            rgba(40, 60, 120, ${Math.min(0.9, Math.max(0, scrollProgress - 0.2) * 2)}) 55%,
-            rgba(60, 80, 140, ${Math.min(0.9, Math.max(0, scrollProgress - 0.3) * 2)}) 65%,
-            rgba(100, 130, 180, ${Math.min(0.8, Math.max(0, scrollProgress - 0.4) * 2)}) 75%,
-            rgba(135, 170, 210, ${Math.min(0.7, Math.max(0, scrollProgress - 0.45) * 2)}) 82%,
-            rgba(140, 120, 90, ${Math.min(0.3, Math.max(0, scrollProgress - 0.5) * 1.5)}) 88%,
-            rgba(110, 150, 90, ${Math.min(0.4, Math.max(0, scrollProgress - 0.55) * 1.5)}) 95%,
-            rgba(90, 140, 80, ${Math.min(0.5, Math.max(0, scrollProgress - 0.6) * 1.5)}) 100%
+            transparent 55%,
+            transparent 100%
           )`,
           opacity: 1
-        }}
-      />
-      <div 
-        className="fixed inset-0 pointer-events-none"
-        style={{
-          background: scrollProgress > 0.3 ? `
-            radial-gradient(circle at 80% 25%, rgba(255, 240, 80, ${Math.min(1, Math.max(0, scrollProgress - 0.3) * 4)}) 0%, rgba(255, 220, 100, ${Math.min(0.9, Math.max(0, scrollProgress - 0.3) * 3)}) 2%, rgba(255, 200, 80, ${Math.min(0.7, Math.max(0, scrollProgress - 0.3) * 2.5)}) 4%, transparent 10%),
-            radial-gradient(circle at 20% 80%, rgba(255,255,255,${Math.min(0.8, Math.max(0, scrollProgress - 0.5) * 2)}) 0%, transparent 15%),
-            radial-gradient(circle at 60% 85%, rgba(255,255,255,${Math.min(0.7, Math.max(0, scrollProgress - 0.5) * 2)}) 0%, transparent 20%),
-            radial-gradient(circle at 85% 75%, rgba(255,255,255,${Math.min(0.6, Math.max(0, scrollProgress - 0.5) * 2)}) 0%, transparent 18%),
-            radial-gradient(circle at 40% 90%, rgba(255,255,255,${Math.min(0.9, Math.max(0, scrollProgress - 0.5) * 2)}) 0%, transparent 12%)
-          ` : 'none',
-          opacity: 1
-        }}
-      />
-      <div 
-        className="fixed pointer-events-none"
-        style={{
-          width: '200px',
-          height: '200px',
-          top: '20%',
-          right: '15%',
-          background: 'radial-gradient(circle, rgba(255, 255, 150, 0.8) 0%, rgba(255, 240, 100, 0.5) 40%, transparent 70%)',
-          opacity: scrollProgress > 0.3 && scrollProgress < 0.7 ? Math.min(1, (scrollProgress - 0.3) * 3) : 0,
-          filter: 'blur(40px)',
-          transition: 'opacity 500ms'
         }}
       />
       {Array.from({ length: 100 }).map((_, i) => {
