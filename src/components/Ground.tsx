@@ -12,8 +12,8 @@ interface TreeData {
 }
 
 const Ground = ({ scrollProgress }: GroundProps) => {
-  const visible = scrollProgress > 0.75;
-  const opacity = Math.min(1, Math.max(0, (scrollProgress - 0.75) * 5));
+  const opacity = Math.min(1, Math.max(0, (scrollProgress - 0.7) * 5));
+  const translateY = (1 - opacity) * 80;
 
   const trees: TreeData[] = [
     { left: '2%', size: 210, delay: 0, type: 'oak' },
@@ -289,10 +289,11 @@ const Ground = ({ scrollProgress }: GroundProps) => {
       className="fixed bottom-0 left-0 right-0 pointer-events-none"
       style={{
         opacity,
-        transition: 'opacity 600ms ease-out',
+        transform: `translateY(${translateY}px)`,
+        transition: 'opacity 700ms ease-out, transform 700ms ease-out',
         zIndex: 1,
         height: '460px',
-        display: visible ? 'block' : 'none'
+        visibility: opacity > 0.001 ? 'visible' : 'hidden'
       }}
     >
       {trees.map((tree, i) => (
