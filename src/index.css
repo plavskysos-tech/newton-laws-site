@@ -145,6 +145,15 @@
   }
 }
 
+@keyframes carDriveReverse {
+  0% {
+    transform: scaleX(-1) translateX(0);
+  }
+  100% {
+    transform: scaleX(-1) translateX(calc(100vw + 240px));
+  }
+}
+
 @keyframes wheelSpin {
   0% {
     transform: rotate(0deg);
