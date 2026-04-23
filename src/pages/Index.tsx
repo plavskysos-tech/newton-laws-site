@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import SpaceBackground from '@/components/SpaceBackground';
 import Navigation from '@/components/Navigation';
 import ContentSections from '@/components/ContentSections';
+import FallingApple from '@/components/FallingApple';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -49,6 +50,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white relative">
       <SpaceBackground scrollProgress={scrollProgress} />
+      <FallingApple scrollProgress={scrollProgress} />
       <Navigation 
         activeSection={activeSection} 
         scrollProgress={scrollProgress} 
